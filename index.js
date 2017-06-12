@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/6/8.
  */
 import angular from 'angular';
-import style from '../less/index.less'
+import style from './src/less/index.less';
 const app = angular.module('app', []);
 app.controller('ctr1', ['$scope', '$timeout', function ($scope, $timeout) {
     $scope.user = {
@@ -15,3 +15,10 @@ app.controller('ctr1', ['$scope', '$timeout', function ($scope, $timeout) {
         $scope.user.name = '李栋'
     }, 3000)
 }]);
+app.directive('hello',function(){
+    return {
+        restrict: 'E',
+        template:'<span class="red" ng-transclude></span>',
+        transclude:true
+    }
+});

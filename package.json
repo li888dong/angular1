@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scripts": {
-      "start": "webpack --config mywebpack.config.js"
-    },
+    "start": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,6 +31,12 @@
   },
   "dependencies": {
     "angular": "^1.6.4",
-    "css-loader": "^0.28.4"
+    "bootstrap": "^3.3.7",
+    "compression": "^1.6.2",
+    "css-loader": "^0.28.4",
+    "loader": "^2.1.1",
+    "path": "^0.12.7",
+    "style": "0.0.3",
+    "webpack-dev-middleware": "^1.10.2"
   }
 }

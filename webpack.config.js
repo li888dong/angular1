@@ -1,6 +1,6 @@
-
+var path = require('path');
 module.exports = {
-    entry :  {index1: './src/js/app.js', index2: './src/js/entry2.js'},
+    entry :  './index.js',
     output : {
         filename : '[name].js',
         path : __dirname + '/dist/js'
@@ -13,5 +13,8 @@ module.exports = {
             {test: /.(jpg|png|gif|svg)$/, use: ['url-loader?limit=8192&name=./[name].[ext]']},/*解析图片*/
             {test: /.less$/, use: ['style-loader', 'css-loader', 'less-loader']}/*解析less, 把less解析成浏览器可以识别的css语言*/
         ]
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, './src') // New
     }
 };
